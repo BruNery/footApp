@@ -1,0 +1,17 @@
+<!-- app/views/players/edit.html.erb -->
+<%= render 'form', player: @player %>
+
+
+<%= form_for(@player) do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :position %>
+    <%= f.text_field :position, class: 'form-control' %>
+  </div>
+
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>

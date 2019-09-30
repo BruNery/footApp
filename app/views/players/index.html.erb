@@ -1,0 +1,16 @@
+<% @players.each do |player| %>
+  <h2><%= player.name %></h2>
+  <p><%= player.last_name %></p>
+  <p><%= player.age %></p>
+  <p><%= player.photo %></p>
+  <p><%= player.position %></p>
+<% end %>
+
+
+<!-- app/views/players/index.html.erb -->
+<% @players.each do |player| %>
+  <%= link_to player.name, player_path(player) %>
+<% end %>
+
+
+
